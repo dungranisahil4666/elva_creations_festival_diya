@@ -1,15 +1,25 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Handmade Decorative Diyas | Festival Collection</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Beautiful handmade decorative Diyas for Diwali, festivals, pooja, home decoration and gifting. Bulk orders available.">
+<title>ELVA CREATIONS | Handmade Festival Diyas</title>
+
+<meta name="description"
+      content="Handmade Decorative Diyas by ELVA CREATIONS. Perfect for Diwali, festivals, pooja, home decoration and gifting.">
 
 <style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,44 +32,101 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+
+    color: white;
+
     background:
-        radial-gradient(circle at top, #5a189a 0%, #240046 45%, #100020 100%);
-    color: #fff;
+        radial-gradient(
+            circle at top,
+            #6a1b9a 0%,
+            #3c096c 35%,
+            #240046 65%,
+            #100020 100%
+        );
+
     overflow-x: hidden;
 }
 
-/* ================= BACKGROUND PARTICLES ================= */
+
+/* =========================================================
+   FLOATING PARTICLES
+========================================================= */
 
 .particles {
     position: fixed;
+
     inset: 0;
+
     pointer-events: none;
+
     overflow: hidden;
+
     z-index: 0;
 }
 
 .particle {
     position: absolute;
+
     width: 5px;
     height: 5px;
-    background: #ffd166;
+
     border-radius: 50%;
+
+    background: #ffd166;
+
     opacity: 0.7;
-    animation: sparkle 5s linear infinite;
+
+    animation:
+        particleFloat 7s linear infinite;
 }
 
-.particle:nth-child(1) { left: 5%; animation-delay: 0s; }
-.particle:nth-child(2) { left: 15%; animation-delay: 1s; }
-.particle:nth-child(3) { left: 28%; animation-delay: 2s; }
-.particle:nth-child(4) { left: 42%; animation-delay: 3s; }
-.particle:nth-child(5) { left: 55%; animation-delay: 1.5s; }
-.particle:nth-child(6) { left: 68%; animation-delay: 4s; }
-.particle:nth-child(7) { left: 80%; animation-delay: 2.5s; }
-.particle:nth-child(8) { left: 93%; animation-delay: 3.5s; }
+.particle:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
 
-@keyframes sparkle {
+.particle:nth-child(2) {
+    left: 15%;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+    left: 28%;
+    animation-delay: 2s;
+}
+
+.particle:nth-child(4) {
+    left: 40%;
+    animation-delay: 3s;
+}
+
+.particle:nth-child(5) {
+    left: 55%;
+    animation-delay: 1.5s;
+}
+
+.particle:nth-child(6) {
+    left: 68%;
+    animation-delay: 4s;
+}
+
+.particle:nth-child(7) {
+    left: 82%;
+    animation-delay: 2.5s;
+}
+
+.particle:nth-child(8) {
+    left: 94%;
+    animation-delay: 3.5s;
+}
+
+@keyframes particleFloat {
+
     0% {
-        transform: translateY(100vh) scale(0);
+        transform:
+            translateY(110vh)
+            scale(0);
+
         opacity: 0;
     }
 
@@ -72,74 +139,113 @@ body {
     }
 
     100% {
-        transform: translateY(-20vh) scale(1.5);
+        transform:
+            translateY(-20vh)
+            scale(1.5);
+
         opacity: 0;
     }
 }
 
-/* ================= HEADER ================= */
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 header {
+
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
+
     z-index: 1000;
 
     display: flex;
-    justify-content: space-between;
+
+    justify-content:
+        space-between;
+
     align-items: center;
 
     padding: 15px 7%;
 
-    background: rgba(20, 0, 40, 0.88);
-    backdrop-filter: blur(15px);
+    background:
+        rgba(20, 0, 40, 0.90);
 
-    border-bottom: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter:
+        blur(15px);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.12);
 }
 
 .logo {
-    font-size: 23px;
-    font-weight: 800;
+
     color: #ffd166;
+
+    font-size: 22px;
+
+    font-weight: 800;
 }
 
 nav {
+
     display: flex;
+
     gap: 25px;
 }
 
 nav a {
-    color: #fff;
+
+    color: white;
+
     text-decoration: none;
+
     font-size: 15px;
+
     transition: 0.3s;
 }
 
 nav a:hover {
+
     color: #ffd166;
 }
 
-/* ================= HERO ================= */
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero {
+
     position: relative;
+
     z-index: 1;
 
-    min-height: 92vh;
+    min-height: 90vh;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
 
     text-align: center;
 
-    padding: 130px 20px 80px;
+    padding:
+        130px 20px 70px;
 }
 
 .hero-diya {
-    font-size: 65px;
+
+    font-size: 70px;
+
     margin-bottom: 15px;
 
     animation:
@@ -148,6 +254,7 @@ nav a:hover {
 }
 
 @keyframes diyaFloat {
+
     0%, 100% {
         transform: translateY(0);
     }
@@ -158,71 +265,99 @@ nav a:hover {
 }
 
 @keyframes diyaGlow {
+
     from {
-        filter: drop-shadow(0 0 5px #ff9f1c);
+        filter:
+            drop-shadow(
+                0 0 5px #ff9f1c
+            );
     }
 
     to {
-        filter: drop-shadow(0 0 25px #ffd166);
+        filter:
+            drop-shadow(
+                0 0 28px #ffd166
+            );
     }
 }
 
 .hero h1 {
-    font-size: clamp(40px, 7vw, 75px);
-    line-height: 1.1;
-    max-width: 950px;
 
-    background: linear-gradient(
-        90deg,
-        #fff,
-        #ffd166,
-        #ff9f1c,
-        #fff
-    );
+    max-width: 1000px;
+
+    font-size:
+        clamp(40px, 7vw, 75px);
+
+    line-height: 1.1;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ffd166,
+            #ff9f1c,
+            #fff
+        );
 
     background-size: 300% auto;
 
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
 
-    animation: gradientMove 5s linear infinite;
+    animation:
+        gradientMove 5s linear infinite;
 }
 
 @keyframes gradientMove {
+
     to {
-        background-position: 300% center;
+        background-position:
+            300% center;
     }
 }
 
 .hero p {
+
     max-width: 700px;
 
     margin-top: 25px;
 
-    font-size: 18px;
-    line-height: 1.7;
-
     color: #eee;
+
+    font-size: 18px;
+
+    line-height: 1.7;
 }
 
 .hero-buttons {
+
     display: flex;
+
     gap: 15px;
+
     margin-top: 30px;
+
     flex-wrap: wrap;
+
     justify-content: center;
 }
 
 .hero-btn {
-    padding: 14px 28px;
+
+    display: inline-block;
+
+    padding:
+        14px 28px;
 
     border-radius: 50px;
 
-    background: linear-gradient(
-        45deg,
-        #ff9f1c,
-        #ffd166
-    );
+    background:
+        linear-gradient(
+            45deg,
+            #ff9f1c,
+            #ffd166
+        );
 
     color: #2b0a3d;
 
@@ -231,127 +366,496 @@ nav a:hover {
     font-weight: bold;
 
     transition: 0.3s;
-
-    box-shadow: 0 10px 30px rgba(255,159,28,0.25);
 }
 
 .hero-btn:hover {
-    transform: translateY(-4px) scale(1.04);
+
+    transform:
+        translateY(-4px)
+        scale(1.04);
 }
 
 .secondary-btn {
-    background: rgba(255,255,255,0.1);
-    color: #fff;
-    border: 1px solid rgba(255,255,255,0.25);
+
+    background:
+        rgba(255,255,255,0.1);
+
+    color: white;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.25);
 }
 
-/* ================= SECTION ================= */
+
+/* =========================================================
+   SECTION
+========================================================= */
 
 .section {
+
     position: relative;
+
     z-index: 1;
 
-    padding: 80px 7%;
+    padding:
+        80px 7%;
 }
 
 .section-title {
+
     text-align: center;
+
     margin-bottom: 50px;
 }
 
 .section-title h2 {
-    font-size: clamp(32px, 5vw, 48px);
+
     color: #ffd166;
+
+    font-size:
+        clamp(32px, 5vw, 48px);
 }
 
 .section-title p {
+
     color: #ddd;
+
     margin-top: 12px;
 }
 
-/* ================= PRODUCTS ================= */
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
 
 .product-grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(245px, 1fr));
+        repeat(
+            auto-fit,
+            minmax(280px, 1fr)
+        );
 
-    gap: 25px;
+    gap: 28px;
 }
 
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
 .product-card {
+
     position: relative;
 
-    background: rgba(255,255,255,0.08);
+    background:
+        rgba(255,255,255,0.08);
 
-    border: 1px solid rgba(255,255,255,0.15);
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
 
     border-radius: 22px;
 
     overflow: hidden;
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(10px);
 
     transition: 0.4s;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.2);
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
+
+    transform:
+        translateY(-10px);
 
     box-shadow:
-        0 20px 50px rgba(255,159,28,0.25);
+        0 20px 50px
+        rgba(255,159,28,0.25);
 }
 
-.product-image {
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.slider {
+
+    position: relative;
+
+    background: white;
+}
+
+.slider-main {
+
     position: relative;
 
     width: 100%;
-    height: 280px;
+
+    height: 310px;
 
     overflow: hidden;
 
     background: #fff;
 }
 
-.product-image img {
+
+/* =========================================================
+   IMAGE / VIDEO
+========================================================= */
+
+.slider-main img,
+.slider-main video {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 
-    transition: 0.5s;
+    display: block;
+
+    background: white;
 }
 
-.product-card:hover .product-image img {
-    transform: scale(1.08);
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #000;
 }
 
-.badge {
+.video-wrapper video {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   VIDEO LABEL
+========================================================= */
+
+.video-label {
+
     position: absolute;
 
-    top: 14px;
-    left: 14px;
+    top: 15px;
 
-    padding: 6px 12px;
+    right: 15px;
+
+    z-index: 10;
+
+    padding:
+        7px 12px;
 
     border-radius: 20px;
 
-    background: #ff9f1c;
+    background:
+        rgba(0,0,0,0.65);
 
-    color: #2b0a3d;
+    color: white;
 
     font-size: 12px;
+
     font-weight: bold;
 }
 
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.slider-arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,0.55);
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    transition: 0.3s;
+}
+
+.slider-arrow:hover {
+
+    background:
+        #ff9f1c;
+
+    color:
+        #240046;
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.badge {
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    z-index: 30;
+
+    padding:
+        6px 12px;
+
+    border-radius: 20px;
+
+    background:
+        #ff9f1c;
+
+    color:
+        #2b0a3d;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   THUMBNAILS
+========================================================= */
+
+.thumbnails {
+
+    display: flex;
+
+    gap: 7px;
+
+    padding: 9px;
+
+    background:
+        rgba(255,255,255,0.97);
+
+    overflow-x: auto;
+
+    scrollbar-width: thin;
+}
+
+.thumbnail {
+
+    position: relative;
+
+    flex:
+        0 0 62px;
+
+    height: 54px;
+
+    border:
+        2px solid transparent;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: white;
+
+    transition: 0.25s;
+}
+
+.thumbnail:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+.thumbnail.active {
+
+    border-color:
+        #ff9f1c;
+
+    box-shadow:
+        0 0 0 1px
+        #ff9f1c;
+}
+
+.thumbnail img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   VIDEO THUMBNAIL
+========================================================= */
+
+.video-thumbnail {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #240046,
+            #5a189a
+        );
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+.video-thumbnail span {
+
+    font-size: 21px;
+}
+
+
+/* =========================================================
+   THUMBNAIL LABEL
+========================================================= */
+
+.thumbnail-label {
+
+    position: absolute;
+
+    bottom: 2px;
+
+    left: 2px;
+
+    right: 2px;
+
+    padding:
+        2px 2px;
+
+    text-align: center;
+
+    background:
+        rgba(0,0,0,0.65);
+
+    color: white;
+
+    font-size: 7px;
+
+    line-height: 1.1;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.dots {
+
+    position: absolute;
+
+    bottom: 68px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    gap: 6px;
+
+    z-index: 25;
+}
+
+.dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.7);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.dot.active {
+
+    background:
+        #ff9f1c;
+
+    transform:
+        scale(1.35);
+}
+
+
+/* =========================================================
+   PRODUCT INFO
+========================================================= */
+
 .product-info {
+
     padding: 20px;
 }
 
 .product-info h3 {
+
     color: #ffd166;
 
     font-size: 21px;
@@ -360,6 +864,7 @@ nav a:hover {
 }
 
 .product-description {
+
     color: #ccc;
 
     font-size: 14px;
@@ -370,56 +875,75 @@ nav a:hover {
 }
 
 .price {
-    font-size: 25px;
+
+    margin:
+        15px 0;
+
+    color: white;
+
+    font-size: 26px;
 
     font-weight: bold;
-
-    color: #fff;
-
-    margin: 15px 0;
 }
 
 .price span {
-    font-size: 13px;
+
     color: #aaa;
+
+    font-size: 13px;
+
+    font-weight: normal;
 }
 
-/* ================= QUANTITY ================= */
+
+/* =========================================================
+   QUANTITY
+========================================================= */
 
 .quantity-area {
+
     display: flex;
 
-    align-items: center;
+    justify-content:
+        space-between;
 
-    justify-content: space-between;
+    align-items: center;
 
     gap: 10px;
 
-    margin-top: 12px;
+    margin-top: 15px;
 }
 
 .quantity-label {
-    font-size: 14px;
+
     color: #ddd;
+
+    font-size: 14px;
 }
 
 .quantity-control {
+
     display: flex;
 
     align-items: center;
 
-    border: 1px solid rgba(255,255,255,0.25);
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.25);
 
     border-radius: 30px;
 
-    overflow: hidden;
-
-    background: rgba(0,0,0,0.2);
+    background:
+        rgba(0,0,0,0.25);
 }
 
 .quantity-control button {
-    width: 38px;
-    height: 36px;
+
+    width: 40px;
+
+    height: 38px;
 
     border: none;
 
@@ -427,7 +951,7 @@ nav a:hover {
 
     color: #ffd166;
 
-    font-size: 21px;
+    font-size: 22px;
 
     cursor: pointer;
 
@@ -435,47 +959,65 @@ nav a:hover {
 }
 
 .quantity-control button:hover {
-    background: rgba(255,209,102,0.15);
+
+    background:
+        rgba(255,209,102,0.15);
 }
 
 .quantity-control input {
-    width: 40px;
-    height: 36px;
+
+    width: 42px;
+
+    height: 38px;
 
     border: none;
+
     outline: none;
 
     background: transparent;
 
-    color: #fff;
+    color: white;
 
     text-align: center;
 
     font-size: 16px;
+
     font-weight: bold;
 }
 
-/* ================= ORDER SUMMARY ================= */
+
+/* =========================================================
+   ORDER SUMMARY
+========================================================= */
 
 .order-box {
+
     max-width: 850px;
 
-    margin: 70px auto 0;
+    margin:
+        70px auto 0;
 
     padding: 30px;
 
-    background: rgba(255,255,255,0.09);
+    background:
+        rgba(255,255,255,0.09);
 
-    border: 1px solid rgba(255,255,255,0.18);
+    border:
+        1px solid
+        rgba(255,255,255,0.18);
 
     border-radius: 25px;
 
-    backdrop-filter: blur(15px);
+    backdrop-filter:
+        blur(15px);
 
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.2);
 }
 
 .order-box h2 {
+
     color: #ffd166;
 
     text-align: center;
@@ -484,6 +1026,7 @@ nav a:hover {
 }
 
 .order-items {
+
     display: flex;
 
     flex-direction: column;
@@ -494,50 +1037,68 @@ nav a:hover {
 }
 
 .order-item {
+
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
     align-items: center;
 
-    padding: 12px 15px;
+    gap: 10px;
+
+    padding:
+        12px 15px;
 
     border-radius: 12px;
 
-    background: rgba(255,255,255,0.06);
+    background:
+        rgba(255,255,255,0.06);
 }
 
 .order-item-name {
-    color: #fff;
+
+    color: white;
 }
 
 .order-item-price {
+
     color: #ffd166;
+
     font-weight: bold;
+
+    white-space: nowrap;
 }
 
 .empty-order {
+
     text-align: center;
+
     color: #aaa;
 
     padding: 15px;
 }
 
 .order-total {
+
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
     align-items: center;
 
-    border-top: 1px solid rgba(255,255,255,0.15);
+    border-top:
+        1px solid
+        rgba(255,255,255,0.15);
 
     padding-top: 20px;
 
-    font-size: 21px;
+    font-size: 20px;
 }
 
 .total-price {
+
     color: #ffd166;
 
     font-size: 30px;
@@ -545,7 +1106,24 @@ nav a:hover {
     font-weight: bold;
 }
 
+.total-items {
+
+    text-align: center;
+
+    color: #aaa;
+
+    margin-top: 10px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
 .whatsapp-btn {
+
     width: 100%;
 
     margin-top: 25px;
@@ -556,7 +1134,8 @@ nav a:hover {
 
     border-radius: 50px;
 
-    background: #25D366;
+    background:
+        #25D366;
 
     color: white;
 
@@ -570,26 +1149,37 @@ nav a:hover {
 }
 
 .whatsapp-btn:hover {
-    transform: translateY(-3px);
+
+    transform:
+        translateY(-3px);
 
     box-shadow:
-        0 10px 30px rgba(37,211,102,0.35);
+        0 10px 30px
+        rgba(37,211,102,0.35);
 }
 
-/* ================= ABOUT ================= */
+
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about {
+
     position: relative;
+
     z-index: 1;
 
-    padding: 90px 8%;
+    padding:
+        90px 8%;
 
     text-align: center;
 
-    background: rgba(0,0,0,0.12);
+    background:
+        rgba(0,0,0,0.12);
 }
 
 .about h2 {
+
     color: #ffd166;
 
     font-size: 42px;
@@ -597,7 +1187,8 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.about p {
+.about > p {
+
     max-width: 800px;
 
     margin: auto;
@@ -609,53 +1200,77 @@ nav a:hover {
     font-size: 17px;
 }
 
-/* ================= FEATURES ================= */
+
+/* =========================================================
+   FEATURES
+========================================================= */
 
 .features {
+
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(200px, 1fr));
+        repeat(
+            auto-fit,
+            minmax(200px,1fr)
+        );
 
     gap: 20px;
 
     max-width: 1000px;
 
-    margin: 45px auto 0;
+    margin:
+        45px auto 0;
 }
 
 .feature {
+
     padding: 25px;
 
-    background: rgba(255,255,255,0.06);
+    background:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
 
     border-radius: 18px;
-
-    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .feature-icon {
+
     font-size: 35px;
+
     margin-bottom: 10px;
 }
 
 .feature h3 {
+
     color: #ffd166;
+
     margin-bottom: 8px;
 }
 
 .feature p {
-    font-size: 14px;
+
     color: #ccc;
+
+    font-size: 14px;
 }
 
-/* ================= CTA ================= */
+
+/* =========================================================
+   CTA
+========================================================= */
 
 .cta {
+
     position: relative;
+
     z-index: 1;
 
-    padding: 90px 20px;
+    padding:
+        90px 20px;
 
     text-align: center;
 
@@ -668,25 +1283,30 @@ nav a:hover {
 }
 
 .cta h2 {
-    font-size: clamp(30px, 5vw, 50px);
+
+    font-size:
+        clamp(30px,5vw,50px);
 
     margin-bottom: 15px;
 }
 
 .cta p {
+
     margin-bottom: 25px;
 
     font-size: 17px;
 }
 
 .cta-btn {
+
     display: inline-block;
 
-    padding: 15px 35px;
+    padding:
+        15px 35px;
 
     border-radius: 50px;
 
-    background: #fff;
+    background: white;
 
     color: #d35400;
 
@@ -698,13 +1318,20 @@ nav a:hover {
 }
 
 .cta-btn:hover {
-    transform: scale(1.06);
+
+    transform:
+        scale(1.06);
 }
 
-/* ================= FOOTER ================= */
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
+
     position: relative;
+
     z-index: 1;
 
     padding: 25px;
@@ -718,105 +1345,148 @@ footer {
     font-size: 14px;
 }
 
-/* ================= MOBILE ================= */
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 700px) {
 
     header {
-        padding: 13px 5%;
+
+        padding:
+            13px 5%;
     }
 
     .logo {
+
         font-size: 18px;
     }
 
     nav {
+
         gap: 12px;
     }
 
     nav a {
+
         font-size: 12px;
     }
 
     .hero {
-        min-height: 90vh;
+
         padding-top: 120px;
     }
 
     .hero p {
+
         font-size: 15px;
     }
 
     .section {
-        padding: 65px 5%;
+
+        padding:
+            65px 5%;
     }
 
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(2,1fr);
 
         gap: 14px;
     }
 
-    .product-image {
-        height: 190px;
+    .slider-main {
+
+        height: 220px;
     }
 
     .product-info {
+
         padding: 14px;
     }
 
     .product-info h3 {
+
         font-size: 16px;
     }
 
     .product-description {
+
         font-size: 12px;
     }
 
     .price {
+
         font-size: 21px;
     }
 
     .quantity-area {
+
         flex-direction: column;
+
         align-items: stretch;
     }
 
     .quantity-control {
+
         justify-content: center;
     }
 
+    .thumbnail {
+
+        flex-basis: 52px;
+
+        height: 46px;
+    }
+
     .order-box {
+
         padding: 20px;
     }
 
     .order-item {
+
         font-size: 13px;
     }
+
 }
+
 
 @media (max-width: 420px) {
 
     .product-grid {
+
         grid-template-columns: 1fr;
     }
 
-    .product-image {
-        height: 260px;
+    .slider-main {
+
+        height: 275px;
     }
 
     nav a:nth-child(3) {
+
         display: none;
     }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- BACKGROUND ANIMATION -->
+
+<!-- =========================================================
+     PARTICLES
+========================================================= -->
 
 <div class="particles">
+
     <div class="particle"></div>
     <div class="particle"></div>
     <div class="particle"></div>
@@ -825,29 +1495,47 @@ footer {
     <div class="particle"></div>
     <div class="particle"></div>
     <div class="particle"></div>
+
 </div>
 
 
-<!-- HEADER -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header>
 
     <div class="logo">
-        🪔 Handmade Diyas
+        🪔 ELVA CREATIONS
     </div>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#products">Diyas</a>
-        <a href="#about">About</a>
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#products">
+            Diyas
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
     </nav>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-<section class="hero" id="home">
+<section
+    class="hero"
+    id="home"
+>
 
     <div class="hero-diya">
         🪔
@@ -858,18 +1546,25 @@ footer {
     </h1>
 
     <p>
-        Beautifully handcrafted decorative Diyas made with
-        love and creativity. Perfect for Diwali, festivals,
-        pooja, home decoration and gifting.
+        Beautifully handcrafted Diyas made with
+        love, creativity and traditional craftsmanship.
+        Perfect for Diwali, festivals, pooja,
+        home decoration and gifting.
     </p>
 
     <div class="hero-buttons">
 
-        <a href="#products" class="hero-btn">
+        <a
+            href="#products"
+            class="hero-btn"
+        >
             Explore Collection 🪔
         </a>
 
-        <a href="#order" class="hero-btn secondary-btn">
+        <a
+            href="#order"
+            class="hero-btn secondary-btn"
+        >
             View My Order
         </a>
 
@@ -878,41 +1573,64 @@ footer {
 </section>
 
 
-<!-- PRODUCTS -->
+<!-- =========================================================
+     PRODUCTS
+========================================================= -->
 
-<section class="section" id="products">
+<section
+    class="section"
+    id="products"
+>
 
     <div class="section-title">
 
-        <h2>Our Diya Collection</h2>
+        <h2>
+            Our Festival Diya Collection
+        </h2>
 
         <p>
-            Select your favourite Diyas and choose the quantity you need.
+            Swipe, view all product details and
+            select the quantity you need.
         </p>
 
     </div>
 
 
-    <div class="product-grid" id="productGrid">
-        <!-- Products will be generated by JavaScript -->
+    <div
+        class="product-grid"
+        id="productGrid"
+    >
+
     </div>
 
 
-    <!-- ORDER SUMMARY -->
+    <!-- =====================================================
+         ORDER SUMMARY
+    ====================================================== -->
 
-    <div class="order-box" id="order">
+    <div
+        class="order-box"
+        id="order"
+    >
 
         <h2>
             🛒 Your Order
         </h2>
 
-        <div class="order-items" id="orderItems">
+        <div
+            class="order-items"
+            id="orderItems"
+        >
 
             <div class="empty-order">
-                Please select quantity for your favourite Diya.
+
+                Please select quantity
+                for your favourite Diya.
+
             </div>
 
         </div>
+
 
         <div class="order-total">
 
@@ -920,11 +1638,23 @@ footer {
                 Total Amount
             </span>
 
-            <span class="total-price" id="totalPrice">
+            <span
+                class="total-price"
+                id="totalPrice"
+            >
                 ₹0
             </span>
 
         </div>
+
+
+        <div
+            class="total-items"
+            id="totalItems"
+        >
+            Total Items: 0
+        </div>
+
 
         <button
             class="whatsapp-btn"
@@ -938,32 +1668,48 @@ footer {
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================================================
+     ABOUT
+========================================================= -->
 
-<section class="about" id="about">
+<section
+    class="about"
+    id="about"
+>
 
     <h2>
         Made With Love ❤️
     </h2>
 
     <p>
-        Every Diya is carefully handmade with creativity,
-        attention to detail and traditional craftsmanship.
-        Bring warmth, beauty and festive vibes to your home
-        with our unique decorative Diyas.
+
+        Every Diya is carefully handmade with
+        creativity, attention to detail and
+        traditional craftsmanship.
+
+        Bring warmth, beauty and festive vibes
+        to your home with our unique
+        decorative Diyas.
+
     </p>
 
 
     <div class="features">
 
+
         <div class="feature">
 
-            <div class="feature-icon">🪔</div>
+            <div class="feature-icon">
+                🪔
+            </div>
 
-            <h3>Handmade</h3>
+            <h3>
+                Handmade
+            </h3>
 
             <p>
-                Carefully handcrafted with love.
+                Carefully handcrafted
+                with love.
             </p>
 
         </div>
@@ -971,12 +1717,17 @@ footer {
 
         <div class="feature">
 
-            <div class="feature-icon">✨</div>
+            <div class="feature-icon">
+                ✨
+            </div>
 
-            <h3>Beautiful Designs</h3>
+            <h3>
+                Unique Designs
+            </h3>
 
             <p>
-                Unique decorative festival designs.
+                Beautiful decorative
+                festival designs.
             </p>
 
         </div>
@@ -984,12 +1735,17 @@ footer {
 
         <div class="feature">
 
-            <div class="feature-icon">🎁</div>
+            <div class="feature-icon">
+                🎁
+            </div>
 
-            <h3>Perfect For Gifting</h3>
+            <h3>
+                Perfect For Gifting
+            </h3>
 
             <p>
-                Great choice for festive gifting.
+                Great choice for
+                festive gifting.
             </p>
 
         </div>
@@ -997,22 +1753,30 @@ footer {
 
         <div class="feature">
 
-            <div class="feature-icon">📦</div>
+            <div class="feature-icon">
+                📦
+            </div>
 
-            <h3>Bulk Orders</h3>
+            <h3>
+                Bulk Orders
+            </h3>
 
             <p>
-                Bulk and custom orders available.
+                Bulk and custom orders
+                are welcome.
             </p>
 
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- CTA -->
+<!-- =========================================================
+     CTA
+========================================================= -->
 
 <section class="cta">
 
@@ -1021,7 +1785,8 @@ footer {
     </h2>
 
     <p>
-        Make your festival brighter with beautiful handmade Diyas.
+        Make your festival brighter
+        with beautiful handmade Diyas.
     </p>
 
     <a
@@ -1034,146 +1799,399 @@ footer {
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
-    © 2026 Handmade Decorative Diyas
+    © 2026 ELVA CREATIONS
+
     <br>
-    Made with ❤️ for Festivals
+
+    Handmade Decorative Diyas ❤️
 
 </footer>
 
 
 <script>
 
-/* =====================================================
+
+/* =========================================================
+   WHATSAPP NUMBER
+=========================================================
+
+   IMPORTANT:
+
+   Replace YOUR_WHATSAPP_NUMBER with your
+   WhatsApp number.
+
+   Example:
+
+   const whatsappNumber = "919876543210";
+
+   Don't use:
+   +91
+   spaces
+   -
+========================================================= */
+
+const whatsappNumber =
+    "YOUR_WHATSAPP_NUMBER";
+
+
+/* =========================================================
    PRODUCT DATA
-   =====================================================
+=========================================================
 
-   Add / remove products here.
+   Each product contains:
 
-   image = image path
-   name  = product name
-   price = product price
-   badge = small label
-*/
+   4 Images:
+   1. Main Product
+   2. Multi Angle
+   3. Dimensions & Features
+   4. Use Cases
+
+   1 Video:
+   5. Product Video
+
+========================================================= */
 
 const products = [
 
+    /* =====================================================
+       PRODUCT 1
+    ===================================================== */
+
     {
+
         id: 1,
-        name: "Lotus Decorative Diya",
-        price: 99,
-        image: "images/diya1.jpg",
-        badge: "Popular",
-        description: "Beautiful handmade lotus design Diya."
+
+        name:
+            "Lotus Decorative Diya",
+
+        price:
+            149,
+
+        badge:
+            "Best Seller",
+
+        description:
+            "Beautiful handmade lotus design Diya for festive decoration.",
+
+        images: [
+
+            "images/lotus/main.jpg",
+
+            "images/lotus/multi-angle.jpg",
+
+            "images/lotus/dimensions.jpg",
+
+            "images/lotus/use-case.jpg"
+
+        ],
+
+        video:
+            "images/lotus/video.mp4"
+
     },
 
+
+    /* =====================================================
+       PRODUCT 2
+    ===================================================== */
+
     {
+
         id: 2,
-        name: "Peacock Decorative Diya",
-        price: 149,
-        image: "images/diya2.jpg",
-        badge: "New",
-        description: "Elegant peacock design for festive decoration."
+
+        name:
+            "Peacock Decorative Diya",
+
+        price:
+            179,
+
+        badge:
+            "Premium",
+
+        description:
+            "Elegant handmade peacock Diya perfect for festivals and gifting.",
+
+        images: [
+
+            "images/peacock/main.jpg",
+
+            "images/peacock/multi-angle.jpg",
+
+            "images/peacock/dimensions.jpg",
+
+            "images/peacock/use-case.jpg"
+
+        ],
+
+        video:
+            "images/peacock/video.mp4"
+
     },
 
+
+    /* =====================================================
+       PRODUCT 3
+    ===================================================== */
+
     {
+
         id: 3,
-        name: "Flower Decorative Diya",
-        price: 79,
-        image: "images/diya3.jpg",
-        badge: "Best Seller",
-        description: "Beautiful floral handmade decorative Diya."
+
+        name:
+            "Flower Decorative Diya",
+
+        price:
+            99,
+
+        badge:
+            "Popular",
+
+        description:
+            "Beautiful floral decorative Diya for pooja and home decoration.",
+
+        images: [
+
+            "images/flower/main.jpg",
+
+            "images/flower/multi-angle.jpg",
+
+            "images/flower/dimensions.jpg",
+
+            "images/flower/use-case.jpg"
+
+        ],
+
+        video:
+            "images/flower/video.mp4"
+
     },
 
+
+    /* =====================================================
+       PRODUCT 4
+    ===================================================== */
+
     {
+
         id: 4,
-        name: "Traditional Handmade Diya",
-        price: 89,
-        image: "images/diya4.jpg",
-        badge: "Festive",
-        description: "Traditional Diya perfect for pooja and festivals."
+
+        name:
+            "Traditional Handmade Diya",
+
+        price:
+            89,
+
+        badge:
+            "Festive",
+
+        description:
+            "Traditional handmade Diya for Diwali and festive celebrations.",
+
+        images: [
+
+            "images/traditional/main.jpg",
+
+            "images/traditional/multi-angle.jpg",
+
+            "images/traditional/dimensions.jpg",
+
+            "images/traditional/use-case.jpg"
+
+        ],
+
+        video:
+            "images/traditional/video.mp4"
+
     },
 
+
+    /* =====================================================
+       PRODUCT 5
+    ===================================================== */
+
     {
+
         id: 5,
-        name: "Royal Designer Diya",
-        price: 129,
-        image: "images/diya5.jpg",
-        badge: "Premium",
-        description: "Premium designer Diya for elegant decoration."
+
+        name:
+            "Royal Designer Diya",
+
+        price:
+            199,
+
+        badge:
+            "Premium",
+
+        description:
+            "Premium designer handmade Diya for elegant festive decoration.",
+
+        images: [
+
+            "images/royal/main.jpg",
+
+            "images/royal/multi-angle.jpg",
+
+            "images/royal/dimensions.jpg",
+
+            "images/royal/use-case.jpg"
+
+        ],
+
+        video:
+            "images/royal/video.mp4"
+
     },
 
+
+    /* =====================================================
+       PRODUCT 6
+    ===================================================== */
+
     {
+
         id: 6,
-        name: "Decorative Lotus Bowl",
-        price: 119,
-        image: "images/diya6.jpg",
-        badge: "Popular",
-        description: "Beautiful lotus bowl style handmade Diya."
-    },
 
-    {
-        id: 7,
-        name: "Festival Special Diya",
-        price: 109,
-        image: "images/diya7.jpg",
-        badge: "Special",
-        description: "Special handmade Diya for festive celebrations."
-    },
+        name:
+            "Festival Special Diya",
 
-    {
-        id: 8,
-        name: "Designer Peacock Diya",
-        price: 159,
-        image: "images/diya8.jpg",
-        badge: "Premium",
-        description: "Elegant decorative peacock Diya for gifting."
+        price:
+            129,
+
+        badge:
+            "New",
+
+        description:
+            "Special decorative Diya designed for festival celebrations.",
+
+        images: [
+
+            "images/festival/main.jpg",
+
+            "images/festival/multi-angle.jpg",
+
+            "images/festival/dimensions.jpg",
+
+            "images/festival/use-case.jpg"
+
+        ],
+
+        video:
+            "images/festival/video.mp4"
+
     }
 
 ];
 
 
-/* =====================================================
-   STORE SELECTED QUANTITY
-   ===================================================== */
+/* =========================================================
+   QUANTITIES
+========================================================= */
 
 const quantities = {};
 
 
-/* =====================================================
-   CREATE PRODUCT CARDS
-   ===================================================== */
+/* =========================================================
+   CURRENT SLIDES
+========================================================= */
+
+const currentSlides = {};
+
+
+/* =========================================================
+   PRODUCT SLIDE INTERVALS
+========================================================= */
+
+const slideIntervals = {};
+
+
+/* =========================================================
+   CREATE PRODUCTS
+========================================================= */
 
 function displayProducts() {
 
-    const grid = document.getElementById("productGrid");
+    const grid =
+        document.getElementById(
+            "productGrid"
+        );
 
     grid.innerHTML = "";
+
 
     products.forEach(product => {
 
         quantities[product.id] = 0;
 
-        const card = document.createElement("div");
+        currentSlides[product.id] = 0;
 
-        card.className = "product-card";
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "product-card";
+
 
         card.innerHTML = `
 
-            <div class="product-image">
+            <div class="slider">
 
-                <img
-                    src="${product.image}"
-                    alt="${product.name}"
-                    loading="lazy"
-                >
 
-                <div class="badge">
-                    ${product.badge}
+                <div class="slider-main">
+
+                    <div class="badge">
+
+                        ${product.badge}
+
+                    </div>
+
+
+                    <img
+                        id="media-${product.id}"
+                        src="${product.images[0]}"
+                        alt="${product.name}"
+                    >
+
+
+                    <button
+                        class="slider-arrow slider-prev"
+                        onclick="changeSlide(${product.id}, -1)"
+                        aria-label="Previous"
+                    >
+                        ‹
+                    </button>
+
+
+                    <button
+                        class="slider-arrow slider-next"
+                        onclick="changeSlide(${product.id}, 1)"
+                        aria-label="Next"
+                    >
+                        ›
+                    </button>
+
+
+                    <div
+                        class="dots"
+                        id="dots-${product.id}"
+                    >
+                    </div>
+
                 </div>
+
+
+                <div
+                    class="thumbnails"
+                    id="thumbs-${product.id}"
+                >
+                </div>
+
 
             </div>
 
@@ -1184,29 +2202,43 @@ function displayProducts() {
                     ${product.name}
                 </h3>
 
+
                 <div class="product-description">
+
                     ${product.description}
+
                 </div>
 
+
                 <div class="price">
+
                     ₹${product.price}
-                    <span> / piece</span>
+
+                    <span>
+                        / piece
+                    </span>
+
                 </div>
 
 
                 <div class="quantity-area">
 
                     <span class="quantity-label">
+
                         Quantity
+
                     </span>
 
+
                     <div class="quantity-control">
+
 
                         <button
                             onclick="changeQuantity(${product.id}, -1)"
                         >
                             −
                         </button>
+
 
                         <input
                             id="qty-${product.id}"
@@ -1215,66 +2247,546 @@ function displayProducts() {
                             readonly
                         >
 
+
                         <button
                             onclick="changeQuantity(${product.id}, 1)"
                         >
                             +
                         </button>
 
+
                     </div>
 
                 </div>
 
             </div>
+
         `;
 
+
         grid.appendChild(card);
+
+
+        createThumbnails(product);
+
+        createDots(product);
+
+    });
+
+
+    startAutoSlides();
+
+}
+
+
+/* =========================================================
+   CREATE THUMBNAILS
+========================================================= */
+
+function createThumbnails(product) {
+
+    const container =
+        document.getElementById(
+            `thumbs-${product.id}`
+        );
+
+
+    /* 4 IMAGE THUMBNAILS */
+
+    product.images.forEach(
+        (image, index) => {
+
+            const thumbnail =
+                document.createElement(
+                    "div"
+                );
+
+            thumbnail.className =
+                "thumbnail";
+
+
+            if (index === 0) {
+
+                thumbnail.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            const labels = [
+
+                "Main",
+
+                "Multi Angle",
+
+                "Dimensions",
+
+                "Use Cases"
+
+            ];
+
+
+            thumbnail.innerHTML = `
+
+                <img
+                    src="${image}"
+                    alt="${labels[index]}"
+                >
+
+                <div
+                    class="thumbnail-label"
+                >
+                    ${labels[index]}
+                </div>
+
+            `;
+
+
+            thumbnail.onclick =
+                () => {
+
+                    goToSlide(
+                        product.id,
+                        index
+                    );
+
+                };
+
+
+            container.appendChild(
+                thumbnail
+            );
+
+        }
+    );
+
+
+    /* VIDEO THUMBNAIL */
+
+    if (product.video) {
+
+        const videoThumbnail =
+            document.createElement(
+                "div"
+            );
+
+        videoThumbnail.className =
+            "thumbnail video-thumbnail";
+
+
+        videoThumbnail.innerHTML = `
+
+            <span>
+                ▶
+            </span>
+
+            <div
+                class="thumbnail-label"
+            >
+                Video
+            </div>
+
+        `;
+
+
+        videoThumbnail.onclick =
+            () => {
+
+                goToSlide(
+                    product.id,
+                    4
+                );
+
+            };
+
+
+        container.appendChild(
+            videoThumbnail
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   CREATE DOTS
+========================================================= */
+
+function createDots(product) {
+
+    const container =
+        document.getElementById(
+            `dots-${product.id}`
+        );
+
+
+    const totalSlides =
+        product.video
+            ? 5
+            : product.images.length;
+
+
+    for (
+        let i = 0;
+        i < totalSlides;
+        i++
+    ) {
+
+        const dot =
+            document.createElement(
+                "span"
+            );
+
+
+        dot.className =
+            "dot";
+
+
+        if (i === 0) {
+
+            dot.classList.add(
+                "active"
+            );
+
+        }
+
+
+        dot.onclick =
+            () => {
+
+                goToSlide(
+                    product.id,
+                    i
+                );
+
+            };
+
+
+        container.appendChild(
+            dot
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   CHANGE SLIDE
+========================================================= */
+
+function changeSlide(
+    productId,
+    direction
+) {
+
+    const product =
+        products.find(
+            p =>
+                p.id === productId
+        );
+
+
+    const totalSlides =
+        product.video
+            ? 5
+            : product.images.length;
+
+
+    let slide =
+        currentSlides[productId];
+
+
+    slide += direction;
+
+
+    if (slide < 0) {
+
+        slide =
+            totalSlides - 1;
+
+    }
+
+
+    if (
+        slide >= totalSlides
+    ) {
+
+        slide = 0;
+
+    }
+
+
+    goToSlide(
+        productId,
+        slide
+    );
+
+}
+
+
+/* =========================================================
+   GO TO SLIDE
+========================================================= */
+
+function goToSlide(
+    productId,
+    slideIndex
+) {
+
+    const product =
+        products.find(
+            p =>
+                p.id === productId
+        );
+
+
+    currentSlides[productId] =
+        slideIndex;
+
+
+    const media =
+        document.getElementById(
+            `media-${productId}`
+        );
+
+
+    /* =====================================================
+       IMAGE SLIDES
+    ===================================================== */
+
+    if (slideIndex < 4) {
+
+        /* Stop existing video */
+
+        if (
+            media.tagName ===
+            "VIDEO"
+        ) {
+
+            try {
+
+                media.pause();
+
+            } catch(e) {}
+
+        }
+
+
+        media.outerHTML = `
+
+            <img
+                id="media-${productId}"
+                src="${product.images[slideIndex]}"
+                alt="${product.name}"
+            >
+
+        `;
+
+    }
+
+
+    /* =====================================================
+       VIDEO SLIDE
+    ===================================================== */
+
+    else {
+
+        media.outerHTML = `
+
+            <div
+                class="video-wrapper"
+                id="video-container-${productId}"
+            >
+
+                <div
+                    class="video-label"
+                >
+                    🎥 Product Video
+                </div>
+
+                <video
+                    id="media-${productId}"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+
+                    <source
+                        src="${product.video}"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support video.
+
+                </video>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* =====================================================
+       UPDATE THUMBNAILS
+    ===================================================== */
+
+    const thumbnails =
+        document.querySelectorAll(
+            `#thumbs-${productId} .thumbnail`
+        );
+
+
+    thumbnails.forEach(
+        (thumbnail, index) => {
+
+            thumbnail.classList.toggle(
+                "active",
+                index === slideIndex
+            );
+
+        }
+    );
+
+
+    /* =====================================================
+       UPDATE DOTS
+    ===================================================== */
+
+    const dots =
+        document.querySelectorAll(
+            `#dots-${productId} .dot`
+        );
+
+
+    dots.forEach(
+        (dot, index) => {
+
+            dot.classList.toggle(
+                "active",
+                index === slideIndex
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   AUTO SLIDES
+========================================================= */
+
+function startAutoSlides() {
+
+    products.forEach(product => {
+
+        if (
+            slideIntervals[product.id]
+        ) {
+
+            clearInterval(
+                slideIntervals[product.id]
+            );
+
+        }
+
+
+        slideIntervals[product.id] =
+            setInterval(() => {
+
+                /*
+                   If currently showing video,
+                   move to next image.
+
+                   Video will NOT autoplay.
+                */
+
+                changeSlide(
+                    product.id,
+                    1
+                );
+
+            }, 5000);
 
     });
 
 }
 
 
-/* =====================================================
-   CHANGE QUANTITY
-   ===================================================== */
+/* =========================================================
+   QUANTITY
+========================================================= */
 
-function changeQuantity(id, change) {
+function changeQuantity(
+    id,
+    change
+) {
 
-    let current = quantities[id] || 0;
+    let current =
+        quantities[id] || 0;
+
 
     current += change;
 
+
     if (current < 0) {
+
         current = 0;
+
     }
+
 
     if (current > 999) {
+
         current = 999;
+
     }
 
-    quantities[id] = current;
 
-    document.getElementById(`qty-${id}`).value = current;
+    quantities[id] =
+        current;
+
+
+    document.getElementById(
+        `qty-${id}`
+    ).value = current;
+
 
     updateOrder();
 
 }
 
 
-/* =====================================================
-   UPDATE ORDER SUMMARY
-   ===================================================== */
+/* =========================================================
+   UPDATE ORDER
+========================================================= */
 
 function updateOrder() {
 
     const orderItems =
-        document.getElementById("orderItems");
+        document.getElementById(
+            "orderItems"
+        );
+
 
     const totalPrice =
-        document.getElementById("totalPrice");
+        document.getElementById(
+            "totalPrice"
+        );
+
+
+    const totalItemsElement =
+        document.getElementById(
+            "totalItems"
+        );
+
 
     orderItems.innerHTML = "";
+
 
     let total = 0;
 
@@ -1285,7 +2797,9 @@ function updateOrder() {
 
     products.forEach(product => {
 
-        const qty = quantities[product.id] || 0;
+        const qty =
+            quantities[product.id] || 0;
+
 
         if (qty > 0) {
 
@@ -1293,65 +2807,72 @@ function updateOrder() {
 
             totalItems += qty;
 
-            const itemTotal = product.price * qty;
+
+            const itemTotal =
+                product.price * qty;
+
 
             total += itemTotal;
 
 
             const item =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
-            item.className = "order-item";
+
+            item.className =
+                "order-item";
+
 
             item.innerHTML = `
 
-                <span class="order-item-name">
+                <span
+                    class="order-item-name"
+                >
 
                     ${product.name}
                     × ${qty}
 
                 </span>
 
-                <span class="order-item-price">
 
-                    ₹${itemTotal}
+                <span
+                    class="order-item-price"
+                >
+
+                    ₹${itemTotal.toLocaleString("en-IN")}
 
                 </span>
 
             `;
 
-            orderItems.appendChild(item);
+
+            orderItems.appendChild(
+                item
+            );
 
         }
 
     });
 
 
-    if (selectedProducts === 0) {
+    if (
+        selectedProducts === 0
+    ) {
 
         orderItems.innerHTML = `
 
-            <div class="empty-order">
+            <div
+                class="empty-order"
+            >
 
-                Please select quantity for your favourite Diya.
+                Please select quantity
+                for your favourite Diya.
 
             </div>
 
         `;
-
-    } else {
-
-        const count =
-            document.createElement("div");
-
-        count.style.textAlign = "center";
-        count.style.color = "#aaa";
-        count.style.marginTop = "10px";
-
-        count.innerText =
-            `Total Items: ${totalItems}`;
-
-        orderItems.appendChild(count);
 
     }
 
@@ -1359,32 +2880,36 @@ function updateOrder() {
     totalPrice.innerText =
         `₹${total.toLocaleString("en-IN")}`;
 
+
+    totalItemsElement.innerText =
+        `Total Items: ${totalItems}`;
+
 }
 
 
-/* =====================================================
+/* =========================================================
    WHATSAPP ORDER
-   ===================================================== */
+========================================================= */
 
 function sendWhatsAppOrder() {
 
-    /*
-       IMPORTANT:
-       Replace YOUR_WHATSAPP_NUMBER with your
-       WhatsApp number.
+    if (
+        whatsappNumber ===
+        "YOUR_WHATSAPP_NUMBER"
+    ) {
 
-       Example:
-       919876543210
+        alert(
+            "Please add your WhatsApp number in the HTML file first."
+        );
 
-       Do NOT use + sign.
-    */
+        return;
 
-    const phoneNumber =
-        "YOUR_WHATSAPP_NUMBER";
+    }
 
 
     let message =
-        "🪔 *New Diya Order*%0A%0A";
+        "🪔 *ELVA CREATIONS - NEW DIYA ORDER*%0A%0A";
+
 
     let total = 0;
 
@@ -1395,14 +2920,18 @@ function sendWhatsAppOrder() {
 
     products.forEach(product => {
 
-        const qty = quantities[product.id] || 0;
+        const qty =
+            quantities[product.id] || 0;
+
 
         if (qty > 0) {
 
             hasOrder = true;
 
+
             const itemTotal =
                 product.price * qty;
+
 
             total += itemTotal;
 
@@ -1410,9 +2939,15 @@ function sendWhatsAppOrder() {
 
 
             message +=
-                `🪔 ${product.name}%0A` +
-                `Quantity: ${qty}%0A` +
-                `Price: ₹${product.price} / piece%0A` +
+                `🪔 *${product.name}*%0A`;
+
+            message +=
+                `Quantity: ${qty}%0A`;
+
+            message +=
+                `Price: ₹${product.price} / piece%0A`;
+
+            message +=
                 `Subtotal: ₹${itemTotal}%0A%0A`;
 
         }
@@ -1442,7 +2977,7 @@ function sendWhatsAppOrder() {
 
 
     const whatsappURL =
-        `https://wa.me/${phoneNumber}?text=${message}`;
+        `https://wa.me/${whatsappNumber}?text=${message}`;
 
 
     window.open(
@@ -1453,9 +2988,9 @@ function sendWhatsAppOrder() {
 }
 
 
-/* =====================================================
-   START WEBSITE
-   ===================================================== */
+/* =========================================================
+   START
+========================================================= */
 
 displayProducts();
 
@@ -1464,5 +2999,6 @@ updateOrder();
 </script>
 
 </body>
+
 </html>
 ```
